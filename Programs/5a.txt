@@ -1,0 +1,6 @@
+int a, b = 0;
+float c;
+char d = 10.0;
+double e;
+
+
