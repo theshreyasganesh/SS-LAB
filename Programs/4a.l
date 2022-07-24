@@ -17,7 +17,7 @@
 <oper>"("            {top++;}
 <oper>")"            {top--;}
 <oper>[a-zA-Z0-9]+   {opnd++; if(valid == 0) {valid = 1; a[i]++;} else ext(0);}
-<oper>"\n"           {if(valid && top == -1) {printf("valid expression\n"); return 0;} else ext(0);}
+<oper>"\n"           {if(valid == 1 && top == -1) {printf("valid expression\n"); return 0;} else ext(0);}
 .\n	             ext(0);
 %%
 
